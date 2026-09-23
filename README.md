@@ -69,6 +69,24 @@ npx serve out       # preview the static export locally
 `public/Emmanuel-Oyekanlu-Resume.pdf` is the downloadable résumé linked from the homepage — regenerate it by
 editing and re-running the build script used to produce it if the résumé content changes.
 
+## Analytics
+
+**Vercel Analytics** is wired in (`@vercel/analytics`) and just needs one toggle: in the Vercel dashboard, go to
+the project's **Analytics** tab and click **Enable**. No code changes or IDs needed — it starts collecting on
+the next deploy.
+
+**Google Analytics 4** is wired in but off by default (`src/components/GoogleAnalytics.tsx` renders nothing
+until a Measurement ID is present). To enable it:
+
+1. Create a GA4 property at [analytics.google.com](https://analytics.google.com) → Admin → Create Property →
+   add a **Web** data stream for `emmanueloyekanlu.com` → copy the **Measurement ID** (`G-XXXXXXXXXX`).
+2. In Vercel: **Settings → Environment Variables**, add `NEXT_PUBLIC_GA_MEASUREMENT_ID` = `G-XXXXXXXXXX` for
+   Production (and Preview if desired).
+3. Redeploy (Vercel → Deployments → Redeploy, or push any commit) so the build picks up the new env var —
+   `NEXT_PUBLIC_*` variables are inlined at build time for a static export.
+
+For local development, copy `.env.example` to `.env.local` and fill in the ID there instead.
+
 ## Demo videos
 
 Project demo videos are embedded via Google Drive `iframe` previews (see `src/components/VideoEmbed.tsx`).
