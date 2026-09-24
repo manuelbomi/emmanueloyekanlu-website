@@ -6,7 +6,8 @@ export type Category =
   | "GPU, HPC & Infrastructure"
   | "Geospatial & Supply Chain"
   | "Healthcare & Life Sciences AI"
-  | "Enterprise Architecture (Palantir Foundry)";
+  | "Enterprise Architecture (Palantir Foundry)"
+  | "Quality Assurance & Test Automation";
 
 export type Video = {
   title: string;
@@ -34,6 +35,7 @@ export const categories: Category[] = [
   "Geospatial & Supply Chain",
   "Healthcare & Life Sciences AI",
   "Enterprise Architecture (Palantir Foundry)",
+  "Quality Assurance & Test Automation",
 ];
 
 export const projects: Project[] = [
@@ -883,13 +885,16 @@ export const projects: Project[] = [
     description: "Document-processing pipeline for financial records built on LangChain.",
     tags: ["LangChain", "Document Processing"],
   },
+  // --- Quality Assurance & Test Automation ---
   {
     slug: "selenium-playwright-test-automation",
     title: "Selenium & Playwright Test Automation Tutorials",
     repo: "Selenium-Playwright-Test-Automation-Tutorials",
-    category: "Data Engineering & MLOps",
-    description: "6-part tutorial series on Selenium and Playwright test automation in Python — from basics to production patterns to AI-agent-driven testing.",
-    tags: ["Selenium", "Playwright", "Test Automation"],
+    category: "Quality Assurance & Test Automation",
+    description:
+      "6-part tutorial series on Selenium and Playwright test automation in Python — from fundamentals through pytest, CI/CD-ready patterns, and AI-agent-driven testing with Claude Code and MCP.",
+    tags: ["Selenium", "Playwright", "pytest", "Test Automation", "CI/CD"],
+    featured: true,
   },
 ];
 

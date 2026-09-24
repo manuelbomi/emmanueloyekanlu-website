@@ -142,6 +142,10 @@ export const skillGroups: { title: string; items: string[] }[] = [
     ],
   },
   {
+    title: "Quality Assurance & Test Automation",
+    items: ["Selenium", "Playwright", "pytest", "Test Automation", "CI/CD Test Pipelines"],
+  },
+  {
     title: "Cybersecurity",
     items: ["Splunk (SIEM)", "Suricata", "Wireshark", "TCPDump", "TCP/IP", "Risk & Vulnerability Assessment"],
   },
