@@ -4,6 +4,8 @@ Personal / professional portfolio site for **Emmanuel Oyekanlu, Ph.D.** — Prin
 Architect. Built with Next.js (static export), TypeScript, and Tailwind CSS, so it deploys identically to
 **Vercel** or **Azure Static Web Apps** (or any static host) with zero platform-specific code.
 
+The website is here:  https://www.emmanueloyekanlu.com/
+
 ## Stack
 
 - **Next.js 16** (App Router), built as a fully static export (`output: "export"`) — no server runtime required.
