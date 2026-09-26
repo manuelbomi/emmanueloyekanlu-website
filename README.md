@@ -1,6 +1,6 @@
 # emmanueloyekanlu.com
 
-Personal / professional portfolio site for **Emmanuel Oyekanlu, Ph.D.** — Principal AI Engineer & Enterprise
+Personal / professional portfolio site for **Emmanuel Oyekanlu, Ph.D.** — Principal AI Engineer & Enterprise Solution
 Architect. Built with Next.js (static export), TypeScript, and Tailwind CSS, so it deploys identically to
 **Vercel** or **Azure Static Web Apps** (or any static host) with zero platform-specific code.
 
