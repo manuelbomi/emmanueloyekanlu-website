@@ -14,7 +14,7 @@ export default function ExperiencePage() {
       <SectionHeading
         eyebrow="Career History"
         title="Experience"
-        description="From network engineering in Nigeria to principal-level AI and enterprise architecture across manufacturing, financial services, and healthcare."
+        description="From network engineering in Africa & Europe to principal-level AI and enterprise architecture across manufacturing, financial services, and healthcare in the US."
       />
 
       <ol className="relative space-y-10 border-l border-border pl-8">
