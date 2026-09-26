@@ -784,6 +784,15 @@ export const projects: Project[] = [
     description: "Explainability techniques (saliency/attribution methods) applied to medical imaging model predictions.",
     tags: ["Explainability", "Medical Imaging"],
   },
+  {
+    slug: "enterprise-healthcare-tdm-platform",
+    title: "Enterprise Healthcare Test Data Management Platform",
+    repo: "enterprise-healthcare-test-data-management-platform",
+    category: "Healthcare & Life Sciences AI",
+    description: "Full-stack, portfolio-grade Cloud Test Data Management platform for regulated healthcare (React/FastAPI/PySpark): PHI/PII discovery and deterministic masking with referential integrity across 5 heterogeneous systems, production-scale subsetting, synthetic data generation, an automated 12-gate certification pipeline, dataset lifecycle/refresh orchestration, storage/compute capacity planning, RBAC with real JWT authentication, and tamper-evident audit evidence packages. Built as an all-synthetic-data reference implementation with a 20-chapter tutorial and an honest, itemized security-limitations section.",
+    tags: ["Test Data Management", "PHI/PII Masking", "FastAPI", "PySpark", "Healthcare Data"],
+    featured: true,
+  },
 
   // --- Enterprise Architecture (Palantir Foundry) ---
   {
