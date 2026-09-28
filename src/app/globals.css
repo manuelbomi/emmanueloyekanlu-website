@@ -10,6 +10,16 @@
   --accent: #0891b2;
   --accent-strong: #0e7490;
   --accent-soft: #ecfeff;
+
+  /* Segment bands — light, distinct blocks that alternate down the page */
+  --tint-blue: #eaf2fb;
+  --tint-teal: #e3f6f8;
+  --navy: #0a2540;
+  --navy-deep: #061626;
+  --on-navy: #e8f6f8;
+  --on-navy-muted: #9fc4d4;
+  --on-navy-accent: #5eead4;
+  --on-navy-border: rgba(232, 246, 248, 0.14);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,6 +33,15 @@
     --accent: #22d3ee;
     --accent-strong: #67e8f9;
     --accent-soft: #082f36;
+
+    --tint-blue: #0b1526;
+    --tint-teal: #082227;
+    --navy: #0a1c30;
+    --navy-deep: #030509;
+    --on-navy: #e2e8f0;
+    --on-navy-muted: #8fb3c2;
+    --on-navy-accent: #5eead4;
+    --on-navy-border: rgba(226, 232, 240, 0.12);
   }
 }
 
@@ -36,6 +55,14 @@
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-accent-soft: var(--accent-soft);
+  --color-tint-blue: var(--tint-blue);
+  --color-tint-teal: var(--tint-teal);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-on-navy: var(--on-navy);
+  --color-on-navy-muted: var(--on-navy-muted);
+  --color-on-navy-accent: var(--on-navy-accent);
+  --color-on-navy-border: var(--on-navy-border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -81,6 +108,27 @@ body {
 .prose-body p {
   color: var(--muted);
   line-height: 1.7;
+}
+
+.card-on-navy {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--on-navy-border);
+  border-radius: 1rem;
+}
+
+.badge-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(94, 234, 212, 0.4);
+  background: rgba(94, 234, 212, 0.12);
+  color: var(--on-navy-accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
 }
 
 ::selection {

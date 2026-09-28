@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="border-b border-border bg-gradient-to-b from-surface-muted/60 to-background">
+      <section className="border-b border-border bg-gradient-to-b from-tint-blue to-background">
         <div className="section-container grid gap-12 py-16 sm:py-24 lg:grid-cols-[1.3fr_0.7fr] lg:items-center">
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-accent">
@@ -84,16 +84,81 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="section-container py-14">
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {profile.stats.map((stat) => (
-            <StatCard key={stat.label} value={stat.value} label={stat.label} />
-          ))}
+      <section className="border-b border-border bg-navy">
+        <div className="section-container py-14">
+          <p className="mb-6 text-center text-xs font-semibold uppercase tracking-[0.25em] text-on-navy-muted">
+            By the numbers
+          </p>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {profile.stats.map((stat) => (
+              <StatCard key={stat.label} value={stat.value} label={stat.label} invert />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DataNivra spotlight */}
+      <section className="border-b border-border bg-gradient-to-br from-navy-deep via-navy to-navy-deep">
+        <div className="section-container py-16 sm:py-20">
+          <span className="badge-new">New &middot; Live Enterprise Deployment</span>
+          <h2 className="mt-5 max-w-3xl text-2xl font-bold tracking-tight text-on-navy sm:text-3xl">
+            DataNivra &mdash; Enterprise Test Data Management, in production
+          </h2>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-on-navy-muted">
+            As Chief AI/Data Architect at{" "}
+            <a
+              href="https://www.datanivra.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-on-navy-accent hover:underline"
+            >
+              DataNivra
+            </a>
+            , I designed and shipped an enterprise-grade test data management platform for a live enterprise
+            client &mdash; built for organizations that handle high-risk, highly regulated data: hospitals and
+            health systems, tax firms, auditing firms, and banks. The platform governs QA and test-data
+            workflows for PHI, PII, and other HIPAA-scoped data, with discovery, masking, and lifecycle
+            controls designed to keep regulated data safe outside of production.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {["PHI / PII Discovery & Masking", "HIPAA-aware Controls", "Healthcare · Tax · Audit · Banking", "Enterprise QA & Test Data"].map(
+              (tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center rounded-full border border-on-navy-border bg-white/5 px-3 py-1 text-xs text-on-navy-muted"
+                >
+                  {tag}
+                </span>
+              )
+            )}
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href="https://www.datanivra.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-strong"
+            >
+              Visit DataNivra.com &rarr;
+            </a>
+            <Link
+              href="/projects/#healthcare-life-sciences-ai"
+              className="rounded-full border border-on-navy-border px-5 py-2.5 text-sm font-semibold text-on-navy hover:border-on-navy-accent hover:text-on-navy-accent"
+            >
+              See a related open-source reference build
+            </Link>
+          </div>
+          <p className="mt-5 max-w-2xl text-xs text-on-navy-muted">
+            DataNivra was built for a specific enterprise client and its codebase lives in a private
+            repository &mdash; it isn&apos;t open source, so there&apos;s no public code link here.
+          </p>
         </div>
       </section>
 
       {/* Highlights */}
-      <section className="section-container py-8">
+      <section className="section-container py-16">
         <SectionHeading
           eyebrow="Core Strengths"
           title="What I bring to the table"
@@ -110,29 +175,31 @@ export default function Home() {
       </section>
 
       {/* Featured Projects */}
-      <section className="section-container py-16">
-        <SectionHeading
-          eyebrow="Selected Work"
-          title="Featured projects"
-          description="A curated slice of 198+ public repositories spanning agentic AI, computer vision, data engineering, and enterprise architecture."
-        />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.slice(0, 6).map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
-        <div className="mt-10 flex justify-center">
-          <Link
-            href="/projects/"
-            className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:border-accent hover:text-accent"
-          >
-            View all {categories.length} project categories &rarr;
-          </Link>
+      <section className="border-y border-border bg-tint-blue">
+        <div className="section-container py-16">
+          <SectionHeading
+            eyebrow="Selected Work"
+            title="Featured projects"
+            description="A curated slice of 198+ public repositories spanning agentic AI, computer vision, data engineering, and enterprise architecture."
+          />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredProjects.slice(0, 6).map((project) => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/projects/"
+              className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:border-accent hover:text-accent"
+            >
+              View all {categories.length} project categories &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Category strip */}
-      <section className="section-container py-8">
+      <section className="section-container py-16">
         <SectionHeading eyebrow="Portfolio Map" title="Browse by category" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((cat) => (
@@ -151,35 +218,37 @@ export default function Home() {
       </section>
 
       {/* Recent experience preview */}
-      <section className="section-container py-16">
-        <SectionHeading
-          eyebrow="Career Snapshot"
-          title="Recent roles"
-          description="18+ years spanning telecom network engineering, applied research, and principal-level AI/data architecture."
-        />
-        <div className="space-y-6">
-          {recentRoles.map((role) => (
-            <div key={`${role.company}-${role.period}`} className="card p-6">
-              <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h3 className="text-base font-semibold text-foreground">{role.role}</h3>
-                <span className="text-xs text-muted">{role.period}</span>
+      <section className="border-y border-border bg-tint-teal">
+        <div className="section-container py-16">
+          <SectionHeading
+            eyebrow="Career Snapshot"
+            title="Recent roles"
+            description="18+ years spanning telecom network engineering, applied research, and principal-level AI/data architecture."
+          />
+          <div className="space-y-6">
+            {recentRoles.map((role) => (
+              <div key={`${role.company}-${role.period}`} className="card p-6">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-base font-semibold text-foreground">{role.role}</h3>
+                  <span className="text-xs text-muted">{role.period}</span>
+                </div>
+                <p className="mt-1 text-sm font-medium text-accent">{role.company}</p>
+                <ul className="prose-body mt-3 list-disc space-y-1.5 pl-5 text-sm">
+                  {role.bullets.slice(0, 3).map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
               </div>
-              <p className="mt-1 text-sm font-medium text-accent">{role.company}</p>
-              <ul className="prose-body mt-3 list-disc space-y-1.5 pl-5 text-sm">
-                {role.bullets.slice(0, 3).map((b, i) => (
-                  <li key={i}>{b}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="mt-8 flex justify-center">
-          <Link
-            href="/experience/"
-            className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:border-accent hover:text-accent"
-          >
-            View full career history &rarr;
-          </Link>
+            ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/experience/"
+              className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:border-accent hover:text-accent"
+            >
+              View full career history &rarr;
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -203,20 +272,22 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="section-container pb-24">
-        <div className="card flex flex-col items-start gap-4 p-8 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h3 className="text-lg font-semibold text-foreground">Let&apos;s build something reliable.</h3>
-            <p className="mt-1 text-sm text-muted">
-              Available for principal-level AI, data architecture, and enterprise-AI engagements.
-            </p>
+      <section className="bg-navy">
+        <div className="section-container py-20">
+          <div className="card-on-navy flex flex-col items-start gap-4 p-8 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 className="text-lg font-semibold text-on-navy">Let&apos;s build something reliable.</h3>
+              <p className="mt-1 text-sm text-on-navy-muted">
+                Available for principal-level AI, data architecture, and enterprise-AI engagements.
+              </p>
+            </div>
+            <Link
+              href="/contact/"
+              className="rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-black hover:bg-accent-strong"
+            >
+              Get in touch
+            </Link>
           </div>
-          <Link
-            href="/contact/"
-            className="rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-black hover:bg-accent-strong"
-          >
-            Get in touch
-          </Link>
         </div>
       </section>
     </div>

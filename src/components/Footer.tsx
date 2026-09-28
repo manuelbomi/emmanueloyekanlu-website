@@ -2,22 +2,22 @@ import { profile } from "@/data/profile";
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-border">
-      <div className="section-container flex flex-col gap-4 py-10 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+    <footer className="mt-24 bg-navy-deep">
+      <div className="section-container flex flex-col gap-4 py-10 text-sm text-on-navy-muted sm:flex-row sm:items-center sm:justify-between">
         <p>
           &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
         </p>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-on-navy-accent">
             GitHub
           </a>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-on-navy-accent">
             LinkedIn
           </a>
-          <a href={profile.scholar} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+          <a href={profile.scholar} target="_blank" rel="noopener noreferrer" className="hover:text-on-navy-accent">
             Google Scholar
           </a>
-          <a href={`mailto:${profile.email}`} className="hover:text-accent">
+          <a href={`mailto:${profile.email}`} className="hover:text-on-navy-accent">
             {profile.email}
           </a>
         </div>
