@@ -1,8 +1,7 @@
 # emmanueloyekanlu.com
 
 Personal / professional portfolio site for **Emmanuel Oyekanlu, Ph.D.** — Principal AI Engineer & Enterprise Solution
-Architect. Built with Next.js (static export), TypeScript, and Tailwind CSS, so it deploys identically to
-**Vercel** or **Azure Static Web Apps** (or any static host) with zero platform-specific code.
+Architect. Built with Next.js (static export), TypeScript, and Tailwind CSS, and deployed on **Vercel**.
 
 The website is here:  https://www.emmanueloyekanlu.com/
 
@@ -29,7 +28,7 @@ npx serve out       # preview the static export locally
 
 ---
 
-## Deploying to Vercel (recommended)
+## Deploying to Vercel
 
 1. Push this repo to GitHub (already done if you're reading this from the repo).
 2. Go to [vercel.com/new](https://vercel.com/new), sign in with GitHub, and **import this repository**.
@@ -42,18 +41,6 @@ npx serve out       # preview the static export locally
    - If you already own it elsewhere: add the domain in **Settings → Domains**, then at your registrar add the
      DNS records Vercel shows you (typically an `A` record to `76.76.21.21` and a `CNAME` for `www` to
      `cname.vercel-dns.com`).
-
-## Deploying to Azure Static Web Apps
-
-1. In the [Azure Portal](https://portal.azure.com), create a new **Static Web App** resource.
-2. Connect it to this GitHub repository during creation (Azure will offer to generate a GitHub Actions workflow
-   automatically) — or use the included workflow at `.github/workflows/azure-static-web-apps.yml`:
-   - Set repository secret `AZURE_STATIC_WEB_APPS_API_TOKEN` (from the Static Web App resource's **Manage deployment token**).
-   - Build settings: **App location** `/`, **Output location** `out`, **API location** — leave blank.
-3. Push to `main` and the workflow builds (`npm run build`) and deploys the static `out/` folder.
-4. **Custom domain:** In the Static Web App resource, go to **Custom domains → Add**, enter
-   `emmanueloyekanlu.com`, and follow the `TXT`/`CNAME` (or `A`/`ALIAS`) validation records Azure provides at
-   your domain registrar.
 
 ---
 
