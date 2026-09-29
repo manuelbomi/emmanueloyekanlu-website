@@ -894,6 +894,55 @@ export const projects: Project[] = [
     description: "Document-processing pipeline for financial records built on LangChain.",
     tags: ["LangChain", "Document Processing"],
   },
+  // --- Real-time conversation intelligence ---
+  {
+    slug: "real-time-conversation-signal-copilot",
+    title: "Real-Time Conversation Signal Copilot",
+    repo: "real-time-conversation-signal-copilot",
+    category: "Agentic AI & LLM Systems",
+    description:
+      "Streams live conversation turns, tags multi-label conversational signals (objection, buying signal, compliance risk, question, action item) with a self-consistency confidence score, retrieves grounded next-best-action recommendations from an approved knowledge base via RAG with citations, and enforces a compliance guardrail layer that withholds and flags rather than silently rewrites non-compliant output.",
+    tags: ["FastAPI", "WebSocket", "RAG", "Guardrails", "React"],
+    featured: true,
+  },
+  {
+    slug: "conversational-llm-finetuning-sft-dpo-lora",
+    title: "Conversational LLM Fine-Tuning — SFT + DPO + LoRA/QLoRA",
+    repo: "conversational-llm-finetuning-sft-dpo-lora",
+    category: "Agentic AI & LLM Systems",
+    description:
+      "End-to-end, CPU-runnable fine-tuning pipeline that turns a small instruct model into a conversational signal classifier and compliant-response suggester: synthetic data generation, LoRA-based supervised fine-tuning, DPO preference optimization continuing the SFT adapter, an evaluation harness, and a merge/export step for serving, with a production fine-tuning and promotion playbook.",
+    tags: ["SFT", "DPO", "LoRA", "PEFT", "HuggingFace"],
+    featured: true,
+  },
+  {
+    slug: "golden-dataset-eval-framework",
+    title: "Golden Dataset & Evaluation Framework",
+    repo: "golden-dataset-eval-framework",
+    category: "Agentic AI & LLM Systems",
+    description:
+      "Human-in-the-loop golden-dataset annotation workflow for conversational AI, with Cohen's/Fleiss' kappa inter-annotator agreement and Expected Calibration Error implemented from scratch, plus a CI-enforced evaluation gate that fails a build when a model or prompt version regresses against the golden set.",
+    tags: ["Evaluation", "Annotation", "Calibration", "CI/CD Gate"],
+  },
+  {
+    slug: "low-latency-llm-serving-benchmark",
+    title: "Low-Latency LLM Serving Benchmark",
+    repo: "low-latency-llm-serving-benchmark",
+    category: "Agentic AI & LLM Systems",
+    description:
+      "Reference architecture and reproducible benchmark harness for low-latency LLM serving: a CPU baseline streaming server, real quantization and concurrency measurements, Kubernetes autoscaling manifests, and a documented vLLM/continuous-batching production path.",
+    tags: ["LLM Serving", "vLLM", "Quantization", "Kubernetes"],
+  },
+  {
+    slug: "realtime-streaming-asr-diarization-pipeline",
+    title: "Real-Time Streaming ASR + Diarization Pipeline",
+    repo: "realtime-streaming-asr-diarization-pipeline",
+    category: "Agentic AI & LLM Systems",
+    description:
+      "Chunked audio ingestion with voice-activity-gated buffering, faster-whisper streaming transcription, and a lightweight speaker-turn diarizer, emitting timestamped speaker-attributed transcript events designed to feed directly into a real-time conversation-signal pipeline.",
+    tags: ["ASR", "faster-whisper", "Diarization", "Streaming"],
+  },
+
   // --- Quality Assurance & Test Automation ---
   {
     slug: "selenium-playwright-test-automation",
