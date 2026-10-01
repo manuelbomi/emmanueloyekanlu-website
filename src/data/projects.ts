@@ -7,6 +7,7 @@ export type Category =
   | "Geospatial & Supply Chain"
   | "Healthcare & Life Sciences AI"
   | "Enterprise Architecture (Palantir Foundry)"
+  | "Semantic Layer, Knowledge Graphs & APIs"
   | "Quality Assurance & Test Automation";
 
 export type Video = {
@@ -35,6 +36,7 @@ export const categories: Category[] = [
   "Geospatial & Supply Chain",
   "Healthcare & Life Sciences AI",
   "Enterprise Architecture (Palantir Foundry)",
+  "Semantic Layer, Knowledge Graphs & APIs",
   "Quality Assurance & Test Automation",
 ];
 
@@ -419,6 +421,24 @@ export const projects: Project[] = [
     description: "Optimization models for aligning workforce capacity with forecasted operational demand.",
     tags: ["Optimization", "Workforce Planning"],
   },
+  {
+    slug: "conversational-llm-finetuning-sft-dpo-lora",
+    title: "Conversational LLM Fine-Tuning: SFT + DPO + LoRA",
+    repo: "conversational-llm-finetuning-sft-dpo-lora",
+    category: "Data Engineering & MLOps",
+    description:
+      "End-to-end fine-tuning pipeline — synthetic data generation, supervised fine-tuning, DPO preference optimization, and LoRA/QLoRA merge and export — that turns a base model into a conversational-signal classifier and compliant-response suggester, runnable on a CPU in minutes.",
+    tags: ["Fine-tuning", "LoRA", "DPO", "SFT"],
+  },
+  {
+    slug: "golden-dataset-eval-framework",
+    title: "Golden Dataset & Evaluation Framework",
+    repo: "golden-dataset-eval-framework",
+    category: "Data Engineering & MLOps",
+    description:
+      "Turns raw conversation snippets into a golden dataset using measured inter-annotator agreement (Cohen's/Fleiss' kappa) and model-calibration metrics (Expected Calibration Error), paired with a CI-usable eval gate that blocks a model or prompt version from shipping if it regresses.",
+    tags: ["Evaluation", "MLOps", "CI/CD"],
+  },
 
   // --- Enterprise & Financial AI ---
   {
@@ -617,6 +637,15 @@ export const projects: Project[] = [
     category: "GPU, HPC & Infrastructure",
     description: "Distributed training setup for medical imaging models across multi-GPU clusters.",
     tags: ["Distributed Training", "Medical Imaging"],
+  },
+  {
+    slug: "low-latency-llm-serving-benchmark",
+    title: "Low-Latency LLM Serving Benchmark",
+    repo: "low-latency-llm-serving-benchmark",
+    category: "GPU, HPC & Infrastructure",
+    description:
+      "Reproducible benchmark harness for low-latency LLM serving — a CPU-runnable baseline you can load-test yourself, a documented quantization measurement, and a GPU/vLLM production path behind the same OpenAI-compatible API contract.",
+    tags: ["LLM Serving", "vLLM", "Quantization", "Benchmarking"],
   },
 
   // --- Geospatial & Supply Chain ---
@@ -861,6 +890,83 @@ export const projects: Project[] = [
     tags: ["Ontology", "Semantics", "Tutorial"],
   },
 
+  // --- Semantic Layer, Knowledge Graphs & APIs ---
+  {
+    slug: "entity-resolution-engine",
+    title: "Entity Resolution & Reconciliation Engine",
+    repo: "entity-resolution-engine",
+    category: "Semantic Layer, Knowledge Graphs & APIs",
+    description:
+      "Reconciles messy, multi-source infrastructure records (a CMDB export, a cloud-inventory dump, a monitoring heartbeat feed) into unified golden-record entities using custom blocking, multi-field similarity scoring, and configurable survivorship rules — with a human review queue and full field-level provenance and audit trail.",
+    tags: ["Entity Resolution", "Data Reconciliation", "FastAPI", "React"],
+    featured: true,
+  },
+  {
+    slug: "infra-knowledge-graph",
+    title: "Live Infrastructure Knowledge Graph",
+    repo: "infra-knowledge-graph",
+    category: "Semantic Layer, Knowledge Graphs & APIs",
+    description:
+      "Neo4j-backed knowledge graph and documented operational ontology for infrastructure topology, reconciling three disparate live feeds (CMDB, service-mesh discovery, telemetry) with staleness/TTL-aware conflict resolution, live WebSocket graph updates, and a blast-radius impact-analysis query.",
+    tags: ["Knowledge Graph", "Neo4j", "Ontology", "Real-time"],
+    featured: true,
+  },
+  {
+    slug: "semantic-data-pipeline",
+    title: "Real-Time Semantic Data Pipeline",
+    repo: "semantic-data-pipeline",
+    category: "Semantic Layer, Knowledge Graphs & APIs",
+    description:
+      "Async staged pipeline (ingest → normalize → entity-link → enrich → publish) that turns raw, inconsistent telemetry into a live, queryable semantic layer — consumed by an example rule-based decision agent whose reasoning trace (facts read, rule fired) is shown live on the dashboard.",
+    tags: ["Streaming", "Entity Linking", "Agent Reasoning", "FastAPI"],
+    featured: true,
+  },
+  {
+    slug: "observability-mcp-gateway",
+    title: "Observability MCP Gateway",
+    repo: "observability-mcp-gateway",
+    category: "Semantic Layer, Knowledge Graphs & APIs",
+    description:
+      "A remote Model Context Protocol (MCP) server over HTTP/SSE exposing a synthetic observability dataset — logs, latency/error metrics, and alerts for five services — with bearer-token access control, built to learn the remote-MCP pattern instead of the more common local stdio server.",
+    tags: ["MCP", "Observability", "HTTP/SSE"],
+  },
+  {
+    slug: "inventory-mcp-toolkit",
+    title: "Inventory MCP Toolkit",
+    repo: "inventory-mcp-toolkit",
+    category: "Semantic Layer, Knowledge Graphs & APIs",
+    description:
+      "A warehouse/inventory system exposed through the Model Context Protocol — a server (5 tools, a resource, a prompt) and a standalone client, implemented end to end in TypeScript over SQLite, to see exactly how an LLM host and an MCP server talk to each other.",
+    tags: ["MCP", "TypeScript", "SQLite"],
+  },
+  {
+    slug: "fulfillment-ops-api",
+    title: "Fulfillment Ops API",
+    repo: "fulfillment-ops-api",
+    category: "Semantic Layer, Knowledge Graphs & APIs",
+    description:
+      "A layered Express/TypeScript REST API over PostgreSQL modeling a warehouse network — warehouses, SKUs, orders, shipments — seeded with 50,000 realistic orders, with measured query-optimization work and a React analytics dashboard on top.",
+    tags: ["REST API", "PostgreSQL", "TypeScript"],
+  },
+  {
+    slug: "service-health-dashboard",
+    title: "Service Health Dashboard",
+    repo: "service-health-dashboard",
+    category: "Semantic Layer, Knowledge Graphs & APIs",
+    description:
+      "Internal-tooling dashboard for live service health — metrics, alerts, and history — built on a hand-written WebSocket layer (no socket.io) over Express/PostgreSQL so the subscription model and backpressure handling stay visible, with a continuous event simulator keeping it live by default.",
+    tags: ["WebSocket", "PostgreSQL", "React"],
+  },
+  {
+    slug: "live-transcription-gateway",
+    title: "Live Transcription Gateway",
+    repo: "live-transcription-gateway",
+    category: "Semantic Layer, Knowledge Graphs & APIs",
+    description:
+      "Real-time audio transcription gateway — browser mic capture, binary WebSocket streaming, a pluggable speech-to-text provider interface, and live partial/final transcript rendering — runnable fully offline with a mock provider, no API key required.",
+    tags: ["WebSocket", "Real-time", "Speech-to-Text"],
+  },
+
   // --- Additional Agentic AI / tooling ---
   {
     slug: "google-adk-tutorial",
@@ -869,6 +975,33 @@ export const projects: Project[] = [
     category: "Agentic AI & LLM Systems",
     description: "Working examples and patterns using Google's Agent Development Kit (ADK) for building agentic applications.",
     tags: ["Google ADK", "Agentic AI"],
+  },
+  {
+    slug: "google-adk-banking-agents",
+    title: "Google ADK Agents — Customer Servicing & Fraud Triage",
+    repo: "Google-ADK-Agents-for-Customer-Servicing-Fraud-Alert-Triage-for-Retail-Banking",
+    category: "Agentic AI & LLM Systems",
+    description:
+      "Hierarchical customer-servicing agent and a fixed-pipeline fraud-triage agent built on Google's Agent Development Kit, with PII-redaction guardrails, an audit trail, and a mandatory human sign-off before a fraud call becomes final — production-hardened with config, logging, containerization, and CI rather than left as a notebook demo.",
+    tags: ["Google ADK", "Agentic AI", "Banking", "Governance"],
+  },
+  {
+    slug: "real-time-conversation-signal-copilot",
+    title: "Real-Time Conversation Signal Copilot",
+    repo: "real-time-conversation-signal-copilot",
+    category: "Agentic AI & LLM Systems",
+    description:
+      "Live conversation-intelligence assistant that tags streamed conversation turns with multi-label signals, retrieves a grounded next-best-action recommendation via FAISS-backed RAG with citations, and enforces a compliance guardrail that withholds — rather than silently rewrites — a recommendation it can't clear.",
+    tags: ["RAG", "Guardrails", "WebSocket", "FastAPI"],
+  },
+  {
+    slug: "realtime-streaming-asr-diarization-pipeline",
+    title: "Real-Time Streaming ASR + Diarization Pipeline",
+    repo: "realtime-streaming-asr-diarization-pipeline",
+    category: "Agentic AI & LLM Systems",
+    description:
+      "Voice-activity-gated audio pipeline that turns a raw microphone stream into timestamped, speaker-attributed transcript events in real time — VAD chunking, streaming speech-to-text (faster-whisper), lightweight diarization, and a WebSocket event feed designed to feed straight into a live conversation copilot.",
+    tags: ["ASR", "Diarization", "Streaming", "Whisper"],
   },
   {
     slug: "crew-ai-fraud",

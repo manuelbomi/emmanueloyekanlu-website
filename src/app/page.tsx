@@ -180,7 +180,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Selected Work"
             title="Featured projects"
-            description="A curated slice of 198+ public repositories spanning agentic AI, computer vision, data engineering, and enterprise architecture."
+            description="A curated slice of 250+ public repositories spanning agentic AI, computer vision, data engineering, and enterprise architecture."
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.slice(0, 6).map((project) => (

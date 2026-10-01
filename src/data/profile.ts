@@ -49,7 +49,7 @@ export const profile = {
   stats: [
     { value: "94%+", label: "Typical ML model accuracy delivered" },
     { value: "33+", label: "Peer-reviewed publications" },
-    { value: "198+", label: "Open-source repositories" },
+    { value: "250+", label: "Open-source repositories" },
     { value: "1", label: "US Patent (Integrated Manufacturing Systems Architecture)" },
   ],
 } as const;

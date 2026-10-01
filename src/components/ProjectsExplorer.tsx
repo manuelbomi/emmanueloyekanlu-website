@@ -31,7 +31,7 @@ export default function ProjectsExplorer() {
       <SectionHeading
         eyebrow="Portfolio"
         title="Projects"
-        description={`A curated set of flagship repositories out of 198+ public projects on GitHub, grouped by domain. Search or filter to explore, or view the full catalog on GitHub.`}
+        description={`A curated set of flagship repositories out of 250+ public projects on GitHub, grouped by domain. Search or filter to explore, or view the full catalog on GitHub.`}
       />
 
       <div className="mb-8 flex flex-col gap-4">
