@@ -421,24 +421,6 @@ export const projects: Project[] = [
     description: "Optimization models for aligning workforce capacity with forecasted operational demand.",
     tags: ["Optimization", "Workforce Planning"],
   },
-  {
-    slug: "conversational-llm-finetuning-sft-dpo-lora",
-    title: "Conversational LLM Fine-Tuning: SFT + DPO + LoRA",
-    repo: "conversational-llm-finetuning-sft-dpo-lora",
-    category: "Data Engineering & MLOps",
-    description:
-      "End-to-end fine-tuning pipeline — synthetic data generation, supervised fine-tuning, DPO preference optimization, and LoRA/QLoRA merge and export — that turns a base model into a conversational-signal classifier and compliant-response suggester, runnable on a CPU in minutes.",
-    tags: ["Fine-tuning", "LoRA", "DPO", "SFT"],
-  },
-  {
-    slug: "golden-dataset-eval-framework",
-    title: "Golden Dataset & Evaluation Framework",
-    repo: "golden-dataset-eval-framework",
-    category: "Data Engineering & MLOps",
-    description:
-      "Turns raw conversation snippets into a golden dataset using measured inter-annotator agreement (Cohen's/Fleiss' kappa) and model-calibration metrics (Expected Calibration Error), paired with a CI-usable eval gate that blocks a model or prompt version from shipping if it regresses.",
-    tags: ["Evaluation", "MLOps", "CI/CD"],
-  },
 
   // --- Enterprise & Financial AI ---
   {
@@ -637,15 +619,6 @@ export const projects: Project[] = [
     category: "GPU, HPC & Infrastructure",
     description: "Distributed training setup for medical imaging models across multi-GPU clusters.",
     tags: ["Distributed Training", "Medical Imaging"],
-  },
-  {
-    slug: "low-latency-llm-serving-benchmark",
-    title: "Low-Latency LLM Serving Benchmark",
-    repo: "low-latency-llm-serving-benchmark",
-    category: "GPU, HPC & Infrastructure",
-    description:
-      "Reproducible benchmark harness for low-latency LLM serving — a CPU-runnable baseline you can load-test yourself, a documented quantization measurement, and a GPU/vLLM production path behind the same OpenAI-compatible API contract.",
-    tags: ["LLM Serving", "vLLM", "Quantization", "Benchmarking"],
   },
 
   // --- Geospatial & Supply Chain ---
@@ -984,24 +957,6 @@ export const projects: Project[] = [
     description:
       "Hierarchical customer-servicing agent and a fixed-pipeline fraud-triage agent built on Google's Agent Development Kit, with PII-redaction guardrails, an audit trail, and a mandatory human sign-off before a fraud call becomes final — production-hardened with config, logging, containerization, and CI rather than left as a notebook demo.",
     tags: ["Google ADK", "Agentic AI", "Banking", "Governance"],
-  },
-  {
-    slug: "real-time-conversation-signal-copilot",
-    title: "Real-Time Conversation Signal Copilot",
-    repo: "real-time-conversation-signal-copilot",
-    category: "Agentic AI & LLM Systems",
-    description:
-      "Live conversation-intelligence assistant that tags streamed conversation turns with multi-label signals, retrieves a grounded next-best-action recommendation via FAISS-backed RAG with citations, and enforces a compliance guardrail that withholds — rather than silently rewrites — a recommendation it can't clear.",
-    tags: ["RAG", "Guardrails", "WebSocket", "FastAPI"],
-  },
-  {
-    slug: "realtime-streaming-asr-diarization-pipeline",
-    title: "Real-Time Streaming ASR + Diarization Pipeline",
-    repo: "realtime-streaming-asr-diarization-pipeline",
-    category: "Agentic AI & LLM Systems",
-    description:
-      "Voice-activity-gated audio pipeline that turns a raw microphone stream into timestamped, speaker-attributed transcript events in real time — VAD chunking, streaming speech-to-text (faster-whisper), lightweight diarization, and a WebSocket event feed designed to feed straight into a live conversation copilot.",
-    tags: ["ASR", "Diarization", "Streaming", "Whisper"],
   },
   {
     slug: "crew-ai-fraud",
