@@ -157,6 +157,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ProxyView spotlight */}
+      <section className="border-b border-border bg-gradient-to-br from-navy-deep via-navy to-navy-deep">
+        <div className="section-container py-16 sm:py-20">
+          <span className="badge-new">In Production &middot; Live Enterprise Deployment</span>
+          <h2 className="mt-5 max-w-3xl text-2xl font-bold tracking-tight text-on-navy sm:text-3xl">
+            ProxyView &mdash; Authentication for the Physical World, in production
+          </h2>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed text-on-navy-muted">
+            As Chief AI Infrastructure Officer at Luca Inc., Delaware, USA (operating as{" "}
+            <a
+              href="https://lens.getproxyview.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-on-navy-accent hover:underline"
+            >
+              ProxyView
+            </a>
+            ), I lead design and development of the Company&apos;s AI and machine-learning infrastructure &mdash;
+            including the ORA (Operational Reality Authentication) Framework, which determines whether a
+            submitted evidence bundle (photo and sensor capture, location, and timestamp) coherently represents
+            a claimed physical event at a claimed place and time. The model is weighed against a global
+            geospatial and environmental reference corpus &mdash; elevation, flood zones, structures, housing,
+            and weather data &mdash; to produce a calibrated confidence score, delivered as a sealed,
+            tamper-evident record via API and webhooks directly into claims adjudication, loan-origination, and
+            collateral-monitoring workflows for insurance, commercial lending, and construction-finance clients.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {[
+              "Physical-World Evidence Authentication",
+              "Fraud & Claims Risk",
+              "Insurance · Lending · Construction Finance",
+              "Geospatial Reference Corpus",
+              "REST API & Webhooks",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="inline-flex items-center rounded-full border border-on-navy-border bg-white/5 px-3 py-1 text-xs text-on-navy-muted"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href="https://lens.getproxyview.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-black hover:bg-accent-strong"
+            >
+              Visit ProxyView &rarr;
+            </a>
+            <Link
+              href="/projects/#enterprise-financial-ai"
+              className="rounded-full border border-on-navy-border px-5 py-2.5 text-sm font-semibold text-on-navy hover:border-on-navy-accent hover:text-on-navy-accent"
+            >
+              See a related open-source reference build
+            </Link>
+          </div>
+          <p className="mt-5 max-w-2xl text-xs text-on-navy-muted">
+            ProxyView&apos;s platform and ORA Framework are proprietary to Luca Inc., Delaware, USA, and its codebase
+            lives in a private repository &mdash; it isn&apos;t open source, so there&apos;s no public code
+            link here.
+          </p>
+        </div>
+      </section>
+
       {/* Highlights */}
       <section className="section-container py-16">
         <SectionHeading
