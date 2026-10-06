@@ -21,7 +21,7 @@ export default function ContactPage() {
       <SectionHeading
         eyebrow="Get In Touch"
         title="Contact"
-        description="Available for principal-level AI, data architecture, GPU/HPC orchestration, and enterprise-AI consulting engagements."
+        description="Available for principal-level AI, data architecture, GPU/HPC orchestration, and enterprise-AI full-time and consulting engagements."
       />
 
       <div className="grid gap-4 sm:grid-cols-2">
