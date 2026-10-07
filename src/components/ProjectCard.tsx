@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Project } from "@/data/projects";
 import VideoEmbed from "./VideoEmbed";
 
@@ -10,7 +11,11 @@ export default function ProjectCard({ project }: { project: Project }) {
           <span className="text-[11px] font-medium text-accent">Demo video</span>
         )}
       </div>
-      <h3 className="text-lg font-semibold text-foreground">{project.title}</h3>
+      <h3 className="text-lg font-semibold text-foreground">
+        <Link href={`/projects/${project.slug}/`} className="hover:text-accent">
+          {project.title}
+        </Link>
+      </h3>
       <p className="prose-body mt-2 flex-1 text-sm">{project.description}</p>
 
       {project.videos && project.videos.length > 0 && (

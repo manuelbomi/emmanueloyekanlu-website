@@ -50,13 +50,13 @@ export const metadata: Metadata = {
     title: `${profile.name}, Ph.D. — ${profile.title}`,
     description: profile.subtitle,
     siteName: profile.name,
-    images: [{ url: profile.photo, width: 1800, height: 2400, alt: profile.name }],
+    images: [{ url: "/images/og-card.png", width: 1200, height: 630, alt: profile.name }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: `${profile.name}, Ph.D. — ${profile.title}`,
     description: profile.subtitle,
-    images: [profile.photo],
+    images: ["/images/og-card.png"],
   },
   alternates: {
     canonical: siteUrl,

@@ -3,7 +3,7 @@
 Personal / professional portfolio site for **Emmanuel Oyekanlu, Ph.D.** — Principal AI Engineer & Enterprise Solution
 Architect. Built with Next.js (static export), TypeScript, and Tailwind CSS, and deployed on **Vercel**.
 
-The website is here:  https://www.emmanueloyekanlu.com/
+The website is here:  https://emmanueloyekanlu.com/
 
 ## Stack
 
