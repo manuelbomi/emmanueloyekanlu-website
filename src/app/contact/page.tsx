@@ -5,6 +5,9 @@ import { profile } from "@/data/profile";
 export const metadata: Metadata = {
   title: "Contact",
   description: "Get in touch with Emmanuel Oyekanlu for principal-level AI, data architecture, and enterprise-AI engagements.",
+  alternates: {
+    canonical: "/contact/",
+  },
 };
 
 const channels = [

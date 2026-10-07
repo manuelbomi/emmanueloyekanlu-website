@@ -6,6 +6,9 @@ import { education, certifications, awards, voluntary } from "@/data/credentials
 export const metadata: Metadata = {
   title: "Experience",
   description: "18+ years of experience spanning AI engineering, enterprise architecture, data engineering, and telecom systems.",
+  alternates: {
+    canonical: "/experience/",
+  },
 };
 
 export default function ExperiencePage() {

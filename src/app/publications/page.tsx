@@ -6,6 +6,9 @@ import { profile } from "@/data/profile";
 export const metadata: Metadata = {
   title: "Publications & Patent",
   description: "US Patent, edited book, and 30+ peer-reviewed publications spanning IIoT, edge machine learning, and smart grid communication.",
+  alternates: {
+    canonical: "/publications/",
+  },
 };
 
 export default function PublicationsPage() {
