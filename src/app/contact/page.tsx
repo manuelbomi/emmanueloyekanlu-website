@@ -22,6 +22,7 @@ export default function ContactPage() {
   return (
     <div className="section-container py-16">
       <SectionHeading
+        as="h1"
         eyebrow="Get In Touch"
         title="Contact"
         description="Available for principal-level AI, data architecture, GPU/HPC orchestration, and enterprise-AI full-time and consulting engagements."

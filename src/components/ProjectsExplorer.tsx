@@ -29,6 +29,7 @@ export default function ProjectsExplorer() {
   return (
     <div className="section-container py-16">
       <SectionHeading
+        as="h1"
         eyebrow="Portfolio"
         title="Projects"
         description={`A curated set of flagship repositories out of 250+ public projects on GitHub, grouped by domain. Search or filter to explore, or view the full catalog on GitHub.`}

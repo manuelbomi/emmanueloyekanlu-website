@@ -19,13 +19,16 @@ const geistMono = Geist_Mono({
 
 const siteUrl = "https://emmanueloyekanlu.com";
 
+const metaDescription =
+  "Principal AI Engineer & Enterprise Architect building Agentic AI, GPU orchestration, and enterprise data platforms. 33+ publications, 1 US patent, 250+ projects.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: `${profile.name}, Ph.D. — ${profile.title}`,
     template: `%s | ${profile.name}`,
   },
-  description: profile.summary.replace(/\s+/g, " ").trim(),
+  description: metaDescription,
   keywords: [
     "Emmanuel Oyekanlu",
     "Principal AI Engineer",

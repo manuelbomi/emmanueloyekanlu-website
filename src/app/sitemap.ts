@@ -7,7 +7,7 @@ const siteUrl = "https://emmanueloyekanlu.com";
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ["", "experience", "projects", "publications", "contact"];
   return routes.map((route) => ({
-    url: `${siteUrl}/${route}`,
+    url: `${siteUrl}/${route}${route ? "/" : ""}`,
     lastModified: new Date(),
   }));
 }

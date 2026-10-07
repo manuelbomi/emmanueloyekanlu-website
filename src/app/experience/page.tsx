@@ -15,6 +15,7 @@ export default function ExperiencePage() {
   return (
     <div className="section-container py-16">
       <SectionHeading
+        as="h1"
         eyebrow="Career History"
         title="Experience"
         description="From network engineering in Africa & Europe to principal-level AI and enterprise architecture across manufacturing, financial services, and healthcare in the US."

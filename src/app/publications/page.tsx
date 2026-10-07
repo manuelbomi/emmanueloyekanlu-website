@@ -15,6 +15,7 @@ export default function PublicationsPage() {
   return (
     <div className="section-container py-16">
       <SectionHeading
+        as="h1"
         eyebrow="Research"
         title="Patent & Publications"
         description="33+ publications and one US Patent spanning industrial IoT, embedded machine learning, and smart-grid signal processing."
